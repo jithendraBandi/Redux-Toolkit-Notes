@@ -1,6 +1,14 @@
 import './App.css';
-import Antd from './components/Antd';
+import { Provider } from 'react-redux';
+import store from './ReduxToolkit/store.js';
+import ReduxToolkitClass from './components/ReduxToolkitClass';
+// import ReduxToolkitFunc from './components/ReduxToolkitFunc';
 
-const App = () => <Antd />
+
+const App = () => (
+    <Provider store={store}>
+        <ReduxToolkitClass />
+    </Provider>
+)
 
 export default App;
